@@ -67,5 +67,29 @@ describe('objectToFormData', () => {
 
         expect(formData.get('name')).toBe('Reza')
         expect(formData.get('age')).toBe('18')
-    })
+    });
+
+    it('should prefix keys with namespace', () => {
+        const obj = { name: 'John Doe', age: 30 };
+        const formData = objectToFormData(obj, undefined, 'user');
+
+        expect(formData.get('user[name]')).toBe('John Doe');
+        expect(formData.get('user[age]')).toBe('30');
+    });
+
+    it('should handle nested objects with namespace', () => {
+        const obj = { user: { name: 'John Doe', age: 30 } };
+        const formData = objectToFormData(obj, undefined, 'user');
+
+        expect(formData.get('user[user][name]')).toBe('John Doe');
+        expect(formData.get('user[user][age]')).toBe('30');
+    });
+
+    it('should handle arrays with namespace', () => {
+        const obj = { hobbies: ['reading', 'coding'] };
+        const formData = objectToFormData(obj, undefined, 'user');
+
+        expect(formData.get('user[hobbies][0]')).toBe('reading');
+        expect(formData.get('user[hobbies][1]')).toBe('coding');
+    });
 });

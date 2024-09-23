@@ -1,4 +1,4 @@
-export default function objectToFormData(obj, form, namespace) {
+export function objectToFormData(obj, form, namespace) {
     let formData = form || new FormData();
     let formKey;
 

@@ -56,4 +56,16 @@ describe('objectToFormData', () => {
         expect(formData.get('education[0][degree]')).toBe('BSc');
         expect(formData.get('education[1][field]')).toBe('Software Engineering');
     });
+
+    it('should use form parameter instead new form data', () => {
+        const form = new FormData();
+        form.append('name' , 'Reza');
+
+        const data = {age: 18 , job: 'developer'};
+
+        const formData = objectToFormData(data , form)
+
+        expect(formData.get('name')).toBe('Reza')
+        expect(formData.get('age')).toBe('18')
+    })
 });

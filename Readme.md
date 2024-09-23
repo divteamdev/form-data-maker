@@ -62,9 +62,4 @@ The `objectToFormData` function returns a `FormData` object that includes the in
 
 If you have suggestions or want to help improve this package, we would love to hear from you!
 
-## License
-
-This project is licensed under the MIT License.
-```
-
 Feel free to let me know if you need any changes or additions!

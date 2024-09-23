@@ -1,13 +1,13 @@
 {
   "name": "form-data-maker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["javascript" , "form-data"],
+  "author": "reza golnari",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",

@@ -1,4 +1,3 @@
-```markdown
 # form-data-maker
 
 `form-data-maker` is a simple package for converting JavaScript objects into `FormData`. This tool helps you easily create form data and prepare it for sending to a server.

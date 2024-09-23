@@ -1,4 +1,4 @@
-import {objectToFormData} from "../index";
+import objectToFormData from "../index";
 
 describe('objectToFormData', () => {
     it('should convert a simple object to FormData', () => {

@@ -1,7 +1,7 @@
 {
   "name": "form-data-maker",
   "version": "1.0.1",
-  "description": "",
+  "description": "form-data-maker is a lightweight JavaScript utility for converting objects into FormData format. It simplifies the process of preparing form data for submission, making it easy to handle nested objects and file uploads. Ideal for web developers who need to send data to APIs without hassle.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
